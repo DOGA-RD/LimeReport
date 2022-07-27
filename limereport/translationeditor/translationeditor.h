@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <QLocale>
+#include <QShortcut>
 #include <QTreeWidgetItem>
 #include "lrreporttranslation.h"
 
