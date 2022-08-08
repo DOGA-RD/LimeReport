@@ -82,7 +82,7 @@ namespace Const{
     const QString FIELD_RX = "\\$D\\s*\\{\\s*([^{}]*)\\s*\\}";
     const QString VARIABLE_RX = "\\$V\\s*\\{\\s*(?:([^\\{\\},]*)|(?:([^\\{\\}]*)\\s*,\\s*([^\\{\\}]*)))\\s*\\}";
     const QString NAMED_VARIABLE_RX = "\\$V\\s*\\{\\s*(?:(%1)|(?:(%1)\\s*,\\s*([^\\{\\}]*)))\\s*\\}";
-    const QString SCRIPT_RX = "\\$S\\s*\\{(.*)\\}";    
+    const QString SCRIPT_RX = "\\$S\\s*\\{(.*)\\}";
     const QString GROUP_FUNCTION_PARAM_RX = "\\(\\s*((?:(?:\\\")|(?:))(?:(?:\\$(?:(?:D\\{\\s*\\w*..*\\})|(?:V\\{\\s*\\w*\\s*\\})|(?:S\\{.+\\})))|(?:\\w*))(?:(?:\\\")|(?:)))(?:(?:\\s*,\\s*(?:\\\"(\\w*)\\\"))|(?:))(?:(?:\\s*,\\s*(?:(\\w*)))|(?:))\\)";
     const int DATASOURCE_INDEX = 3;
     const int VALUE_INDEX = 2;
@@ -104,10 +104,10 @@ namespace Const{
     QString extractClassName(QString className);
     QString escapeSimbols(const QString& value);
     QString replaceHTMLSymbols(const QString &value);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 3)
+#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 1)
     QVector<QString> normalizeCaptures(const QRegularExpressionMatch &reg);
 #else
-    QVector<QString> normalizeCaptures(const QRegExp &reg);    
+    QVector<QString> normalizeCaptures(const QRegExp &reg);
 #endif
     bool isColorDark(QColor color);
 
