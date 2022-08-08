@@ -9,6 +9,8 @@ option(ENABLE_ZINT "Enable libzint build for barcode support" OFF)
 option(LIMEREPORT_STATIC "Build LimeReport as static library" OFF)
 option(USE_QT6 "Use Qt6" OFF)
 
+find_package(Threads REQUIRED)
+
 if(USE_QT6)
     find_package(QT NAMES Qt6)
 else()
