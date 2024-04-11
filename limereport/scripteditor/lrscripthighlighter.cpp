@@ -190,6 +190,15 @@ void ScriptHighlighter::highlightBlock(const QString& text)
                             setFormat(i-(buffer.length()-1), buffer.length(), m_formats[StringFormat]);
                             buffer.clear();
                             break;
+                        case Undefined:
+                        case Start:
+                        case Code:
+                        case MayBeComment:
+                        case Comment:
+                        case Comment2:
+                        case Separator:
+                        case StatesCount:
+                            break;
                     }
                 default:
                     break;

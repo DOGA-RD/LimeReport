@@ -1175,10 +1175,11 @@ void PageDesignIntf::activateItemToJoin(QRectF itemRect, QList<ItemProjections>&
 
 void PageDesignIntf::selectAllChildren(BaseDesignIntf *item)
 {
-    if (item)
+    if (item) {
         foreach(BaseDesignIntf* child, item->childBaseItems()){
             child->setSelected(true);
         }
+    }
 }
 
 void PageDesignIntf::rectMoved(QRectF itemRect, BaseDesignIntf* container){
